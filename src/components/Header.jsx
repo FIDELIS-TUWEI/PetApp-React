@@ -1,13 +1,26 @@
-import "../styles/header.css";
-import { HiShoppingCart, HiSearch } from "react-icons/hi";
+import PropTypes from "prop-types";
+import '../styles/header.css';
+import { HiShoppingCart, HiSearch, HiMenu, HiX } from "react-icons/hi";
 
-const Header = () => {
+const Header = ({ menuOpen, setMenuOpen }) => {
+  const menuIcon = menuOpen ? <HiX /> : <HiMenu />
+  const handleToggle = () => {
+    setMenuOpen(!menuOpen)
+  }
   return (
+    <>
     <header className="header">
       <Navbar />
     </header>
+    <button className="burger--menu" onClick={handleToggle}>{menuIcon}</button>
+    </>
   )
 };
+Header.propTypes = {
+  menuOpen: PropTypes.bool,
+  setMenuOpen: PropTypes.bool
+}
+
 
 const Navbar = () => {
   return (
@@ -38,8 +51,8 @@ const Navbar = () => {
         </ul>
       </nav>
       <div className="nav--icons">
-        <HiShoppingCart />
-        <HiSearch />
+        <HiShoppingCart className='nav-icon' />
+        <HiSearch className='nav-icon' />
       </div>
     </>
   )

@@ -16,18 +16,31 @@ const Header = ({ menuOpen, setMenuOpen }) => {
     </>
   )
 };
+
 Header.propTypes = {
   menuOpen: PropTypes.bool,
   setMenuOpen: PropTypes.bool
-}
+};
 
+export const ResponsiveMenu = ({ menuOpen, setMenuOpen }) => {
+  return (
+    <div className={`res--menu ${menuOpen ? 'res--menu--open' : ''}`}>
+      <Navbar />
+    </div>
+  )
+};
+
+ResponsiveMenu.propTypes = {
+  menuOpen: PropTypes.bool,
+  setMenuOpen: PropTypes.bool,
+}
 
 const Navbar = () => {
   return (
     <>
       <nav className="header--nav">
         <div className="nav--logo">
-          <a href="#">
+          <a href="#home">
             <h2>PetCraze</h2>
           </a>
         </div>
@@ -43,7 +56,7 @@ const Navbar = () => {
             <a href="#category">Category</a>
           </li>
           <li>
-            <a href="#">About Us</a>
+            <a href="#about">About Us</a>
           </li>
           <li>
             <a href="#footer">Contact</a>

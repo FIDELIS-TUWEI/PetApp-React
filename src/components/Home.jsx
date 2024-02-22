@@ -1,5 +1,6 @@
 import "../styles/home.css";
 import { HiOutlinePlay } from "react-icons/hi";
+import homeImage from "../assets/home-image.jpg";
 
 const Home = () => {
   return (
@@ -21,7 +22,9 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="home-image"></div>
+      <div className="home--image">
+        <img src={homeImage} alt="Dog Lovers" />
+      </div>
     </section>
   )
 }

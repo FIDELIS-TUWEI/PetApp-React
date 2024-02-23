@@ -1,7 +1,7 @@
-import dogImage from "../assets/dog.jpg";
-import catImage from "../assets/cat.jpg";
-import parrotImage from "../assets/parrot.jpg";
-import rabbitImage from "../assets/rabbit.jpg";
+import dogImage from "../assets/dog.png";
+import catImage from "../assets/cat.png";
+import parrotImage from "../assets/parrot.png";
+import rabbitImage from "../assets/rabbit.png";
 
 export const PetData = [
     {

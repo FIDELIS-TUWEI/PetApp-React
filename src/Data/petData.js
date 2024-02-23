@@ -3,7 +3,7 @@ import catImage from "../assets/cat.jpg";
 import parrotImage from "../assets/parrot.jpg";
 import rabbitImage from "../assets/rabbit.jpg";
 
-export const petData = [
+export const PetData = [
     {
         id: 1,
         title: "Dog",

@@ -1,5 +1,5 @@
 import "../styles/category.css";
-import { PetData } from "../Data/petData";
+import { PetData } from "../Data/PetData";
 
 const Category = () => {
   return (

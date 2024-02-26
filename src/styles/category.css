@@ -25,6 +25,10 @@
     background: rgb(244, 243, 243);
 }
 
+.category--box:hover {
+    transform: translateY(-5px);
+}
+
 .box--image {
     width: 150px;
     height: 150px;

@@ -3,6 +3,7 @@ import Header, { ResponsiveMenu } from './components/Header'
 import Home from './components/Home'
 import Category from './components/Category'
 import Banner from './components/Banner'
+import PetList from './components/PetList'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -13,6 +14,7 @@ function App() {
         <Home />
         <Category />
         <Banner />
+        <PetList />
       </>
   )
 }

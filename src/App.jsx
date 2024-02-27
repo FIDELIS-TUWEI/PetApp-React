@@ -5,6 +5,7 @@ import Category from './components/Category'
 import Banner from './components/Banner'
 import PetList from './components/PetList'
 import Services from './components/Services'
+import Footer from './components/Footer'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -17,6 +18,7 @@ function App() {
         <Banner />
         <PetList />
         <Services />
+        <Footer />
       </>
   )
 }

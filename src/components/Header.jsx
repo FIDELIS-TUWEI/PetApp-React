@@ -9,10 +9,10 @@ const Header = ({ menuOpen, setMenuOpen }) => {
   }
   return (
     <>
-    <header className="header">
-      <Navbar />
-    </header>
-    <button className="burger--menu" onClick={handleToggle}>{menuIcon}</button>
+      <header className="header">
+        <Navbar setMenuOpen={setMenuOpen} />
+      </header>
+      <button className="burger--menu" onClick={handleToggle}>{menuIcon}</button>
     </>
   )
 };
@@ -25,7 +25,7 @@ Header.propTypes = {
 export const ResponsiveMenu = ({ menuOpen, setMenuOpen }) => {
   return (
     <div className={`res--menu ${menuOpen ? 'res--menu--open' : ''}`}>
-      <Navbar />
+      <Navbar setMenuOpen={setMenuOpen} />
     </div>
   )
 };
@@ -35,7 +35,7 @@ ResponsiveMenu.propTypes = {
   setMenuOpen: PropTypes.bool,
 }
 
-const Navbar = () => {
+const Navbar = ({ setMenuOpen }) => {
   return (
     <>
       <nav className="header--nav">
@@ -47,19 +47,19 @@ const Navbar = () => {
         <div className="nav--divider"></div>
         <ul className="nav--list">
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
           </li>
           <li>
-            <a href="#category">Category</a>
+            <a href="#category" onClick={() => setMenuOpen(false)}>Category</a>
           </li>
           <li>
-            <a href="#about">About Us</a>
+            <a href="#about" onClick={() => setMenuOpen(false)}>About Us</a>
           </li>
           <li>
-            <a href="#footer">Contact</a>
+            <a href="#footer" onClick={() => setMenuOpen(false)}>Contact</a>
           </li>
         </ul>
       </nav>
@@ -69,6 +69,10 @@ const Navbar = () => {
       </div>
     </>
   )
+};
+
+Navbar.propTypes = {
+  setMenuOpen: PropTypes.bool,
 }
 
 export default Header;

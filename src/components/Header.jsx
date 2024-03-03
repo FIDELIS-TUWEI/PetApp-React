@@ -4,9 +4,11 @@ import { HiShoppingCart, HiSearch, HiMenu, HiX } from "react-icons/hi";
 
 const Header = ({ menuOpen, setMenuOpen }) => {
   const menuIcon = menuOpen ? <HiX /> : <HiMenu />
+
   const handleToggle = () => {
     setMenuOpen(!menuOpen)
-  }
+  };
+
   return (
     <>
       <header className="header">

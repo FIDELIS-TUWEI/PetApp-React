@@ -17,10 +17,10 @@ const Footer = () => {
 
       <div className="footer--menu">
         <ul className="footer--menu--list">
-          <li><a href="#">Home</a></li>
-          <li><a href="">Category</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#category">Category</a></li>
+          <li><a href="#home">About</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
 
         <div className="footer--menu--icons">

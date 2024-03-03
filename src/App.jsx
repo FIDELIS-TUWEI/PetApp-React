@@ -8,7 +8,8 @@ import Services from './components/Services'
 import Footer from './components/Footer'
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
+  
   return (
       <>
         <ResponsiveMenu menuOpen={menuOpen} setMenuOpen={menuOpen} />

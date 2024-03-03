@@ -1,9 +1,15 @@
 import "../styles/petList.css";
 import { PetData } from "../Data/PetData";
+import { motion } from "framer-motion";
 
 const PetList = () => {
   return (
-    <section className="pets">
+    <motion.section 
+      className="pets"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 4 }}
+    >
       <p className="section--slogan">Recommendation</p>
       <h2 className="section--heading">Best Choice</h2>  
 
@@ -22,7 +28,7 @@ const PetList = () => {
           </div>
         ))}
       </div>  
-    </section>
+    </motion.section>
   )
 }
 

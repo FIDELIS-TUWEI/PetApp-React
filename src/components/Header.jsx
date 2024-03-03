@@ -20,8 +20,8 @@ const Header = ({ menuOpen, setMenuOpen }) => {
 };
 
 Header.propTypes = {
-  menuOpen: PropTypes.bool,
-  setMenuOpen: PropTypes.bool
+  menuOpen: PropTypes.bool.isRequired,
+  setMenuOpen: PropTypes.func.isRequired
 };
 
 export const ResponsiveMenu = ({ menuOpen, setMenuOpen }) => {
@@ -33,8 +33,8 @@ export const ResponsiveMenu = ({ menuOpen, setMenuOpen }) => {
 };
 
 ResponsiveMenu.propTypes = {
-  menuOpen: PropTypes.bool,
-  setMenuOpen: PropTypes.bool,
+  menuOpen: PropTypes.bool.isRequired,
+  setMenuOpen: PropTypes.func.isRequired,
 }
 
 const Navbar = ({ setMenuOpen }) => {
@@ -78,7 +78,7 @@ const Navbar = ({ setMenuOpen }) => {
 };
 
 Navbar.propTypes = {
-  setMenuOpen: PropTypes.bool,
+  setMenuOpen: PropTypes.func.isRequired,
 }
 
 export default Header;

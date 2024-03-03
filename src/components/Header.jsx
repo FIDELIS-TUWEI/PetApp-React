@@ -47,19 +47,19 @@ const Navbar = ({ setMenuOpen }) => {
         <div className="nav--divider"></div>
         <ul className="nav--list">
           <li>
-            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+            <a href="home" onClick={() => setMenuOpen(false)}>Home</a>
           </li>
           <li>
-            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+            <a href="services" onClick={() => setMenuOpen(false)}>Services</a>
           </li>
           <li>
-            <a href="#category" onClick={() => setMenuOpen(false)}>Category</a>
+            <a href="category" onClick={() => setMenuOpen(false)}>Category</a>
           </li>
           <li>
-            <a href="#about" onClick={() => setMenuOpen(false)}>About Us</a>
+            <a href="about" onClick={() => setMenuOpen(false)}>About Us</a>
           </li>
           <li>
-            <a href="#footer" onClick={() => setMenuOpen(false)}>Contact</a>
+            <a href="footer" onClick={() => setMenuOpen(false)}>Contact</a>
           </li>
         </ul>
       </nav>

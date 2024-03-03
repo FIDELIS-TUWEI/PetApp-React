@@ -38,30 +38,34 @@ ResponsiveMenu.propTypes = {
 }
 
 const Navbar = ({ setMenuOpen }) => {
+  const handleLinkClick = () => {
+    setMenuOpen(false)
+  };
+
   return (
     <>
       <nav className="header--nav">
         <div className="nav--logo">
-          <a href="#home" onClick={() => setMenuOpen(false)}>
+          <a href="#home" onClick={handleLinkClick}>
             <h2>PetCraze</h2>
           </a>
         </div>
         <div className="nav--divider"></div>
         <ul className="nav--list">
           <li>
-            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+            <a href="#home" onClick={handleLinkClick}>Home</a>
           </li>
           <li>
-            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+            <a href="#services" onClick={handleLinkClick}>Services</a>
           </li>
           <li>
-            <a href="#category" onClick={() => setMenuOpen(false)}>Category</a>
+            <a href="#category" onClick={handleLinkClick}>Category</a>
           </li>
           <li>
-            <a href="#home" onClick={() => setMenuOpen(false)}>About Us</a>
+            <a href="#home" onClick={handleLinkClick}>About Us</a>
           </li>
           <li>
-            <a href="#footer" onClick={() => setMenuOpen(false)}>Contact</a>
+            <a href="#footer" onClick={handleLinkClick}>Contact</a>
           </li>
         </ul>
       </nav>

@@ -1,10 +1,16 @@
 import "../styles/footer.css";
-
-import { BsFacebook, BsInstagram, BsTwitterX, BsYoutube } from "react-icons/bs"
+import { BsFacebook, BsInstagram, BsTwitterX, BsYoutube } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <section className="footer" id="footer">
+    <motion.section 
+      className="footer" 
+      id="footer"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 2 }}
+    >
       <div className="footer--news--feed">
         <div className="news--feed--text">
           <h3>Subscribe to our News Letter!</h3>
@@ -37,7 +43,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} - PetCraze All rights reserved.
         </p>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
